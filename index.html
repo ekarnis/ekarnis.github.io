@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title>
+    Login
+  </title>
+</head>
+
+<body>
+  <form name=loginform onSubmit="return check()" method="post" action="main.html">
+    <fieldset>
+      <legend>Login:</legend>
+      <label>Username</label>:
+      <br>
+      <input type="text" name="username" placeholder="Hint: it's EricKarnis" value="" required>
+      <br>
+      <br>
+      <label>Password</label>
+      <br>
+      <input type="password" name="password" placeholder="Hint: it's 500520383" value="" required>
+      <br>
+      <br>
+      <input type="submit" value="Login">
+    </fieldset>
+  </form>
+  <script>
+    function check() {
+      var un = document.loginform.username.value;
+      var pw = document.loginform.password.value;
+      var uname = "EricKarnis";
+      var pword = "500520383";
+      if ((un == uname) && (pw == pword)) {
+        return true;
+      } else {
+        alert("Login was unsuccessful, please check your username and password");
+        return false;
+      }
+    }
+  </script>
+</body>
+
+</html>
